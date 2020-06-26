@@ -1,0 +1,20 @@
+.tab {
+  width: 150px;
+  height: 80px;
+
+  background-color: blue;
+  color: #fff;
+  font-size: 20px;
+
+  border: 2px solid #fff;
+  border-radius: 20px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.active {
+  transform: translatey(-10px);
+}

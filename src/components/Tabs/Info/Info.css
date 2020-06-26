@@ -1,0 +1,13 @@
+.info {
+  width: 70vw;
+  margin: 0 auto;
+
+  position: absolute;
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.info--active {
+  opacity: 1;
+}

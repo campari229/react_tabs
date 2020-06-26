@@ -1,0 +1,21 @@
+.tabs-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.tabs-wrapper {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.info-wrapper {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.info-list {
+  list-style: none;
+  font-size: 30px;
+}
