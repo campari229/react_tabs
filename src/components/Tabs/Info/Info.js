@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import { infoShape } from '../../Shape/Shape';
 import './Info.css';
 
 export const Info = ({ info, tabIndex, index }) => (
@@ -13,8 +14,4 @@ export const Info = ({ info, tabIndex, index }) => (
   </div>
 );
 
-Info.propTypes = {
-  info: PropTypes.string.isRequired,
-  tabIndex: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-};
+Info.propTypes = infoShape;

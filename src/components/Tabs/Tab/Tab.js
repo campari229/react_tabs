@@ -1,24 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import { tabShape } from '../../Shape/Shape';
 import './Tab.css';
 
-export const Tab = ({ title, tabIndex, onFocus, index }) => (
+export const Tab = ({ title, tabIndex, onClick, index }) => (
   <button
+    key={index}
     type="button"
     href="#"
     className={tabIndex === index
       ? 'tab active'
       : 'tab'
     }
-    onFocus={() => onFocus(index)}
+    onClick={() => onClick(index)}
   >
     {title}
   </button>
 );
 
-Tab.propTypes = {
-  title: PropTypes.string.isRequired,
-  tabIndex: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  onFocus: PropTypes.func.isRequired,
-};
+Tab.propTypes = tabShape;

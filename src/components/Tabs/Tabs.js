@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { Tab } from './Tab/Tab';
 import { Info } from './Info/Info';
+
 import './Tabs.css';
 
 export class Tabs extends React.Component {
-  constructor(props) {
-    super({ props });
+  state = {
+    tabIndex: 0,
+  };
 
-    this.state = {
-      tabIndex: 0,
-    };
-  }
-
-  onFocus = (index) => {
+  onClick = (index) => {
     this.setState({
       tabIndex: index,
     });
@@ -26,18 +24,16 @@ export class Tabs extends React.Component {
     return (
       <>
         <div className="tabs-wrapper">
-          <ul className="tabs-list">
+          <div className="tabs-list">
             {tabs.map((tab, index) => (
-              <li className="tabs-list__item" key={tab.title}>
-                <Tab
-                  title={tab.title}
-                  tabIndex={tabIndex}
-                  index={index}
-                  onFocus={this.onFocus}
-                />
-              </li>
+              <Tab
+                title={tab.title}
+                tabIndex={tabIndex}
+                index={index}
+                onClick={this.onClick}
+              />
             ))}
-          </ul>
+          </div>
         </div>
         <div className="info-wrapper">
           <ul className="info-list">
@@ -58,10 +54,8 @@ export class Tabs extends React.Component {
 }
 
 Tabs.propTypes = {
-  tabs: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
+  tabs: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  })).isRequired,
 };

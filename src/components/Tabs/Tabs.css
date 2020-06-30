@@ -1,8 +1,12 @@
 .tabs-list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
+
+  margin: 0;
   padding: 0;
+
+  border-bottom: 2px solid black;
 }
 
 .tabs-wrapper {
@@ -16,6 +20,8 @@
 }
 
 .info-list {
+  box-sizing: border-box;
+  height: 50px;
   list-style: none;
   font-size: 30px;
 }
