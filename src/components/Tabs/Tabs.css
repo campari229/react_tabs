@@ -19,9 +19,7 @@
   margin: 0 auto;
 }
 
-.info-list {
-  box-sizing: border-box;
-  height: 50px;
-  list-style: none;
-  font-size: 30px;
+.info {
+  margin-top: 50px;
+  font-size: 40px;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Tab } from './Tab/Tab';
-import { Info } from './Info/Info';
 
 import './Tabs.css';
 
@@ -36,17 +35,9 @@ export class Tabs extends React.Component {
           </div>
         </div>
         <div className="info-wrapper">
-          <ul className="info-list">
-            {tabs.map((tab, index) => (
-              <li className="info-list__item" key={tab.title}>
-                <Info
-                  info={tab.content}
-                  tabIndex={tabIndex}
-                  index={index}
-                />
-              </li>
-            ))}
-          </ul>
+          <p className="info">
+            {tabs[tabIndex].content}
+          </p>
         </div>
       </>
     );
